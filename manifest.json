@@ -1,0 +1,20 @@
+{
+  "manifest_version": 2,
+  "name": "Project Topics: Word & PDF Converter",
+  "version": "0.1",
+  "content_scripts": [
+  {
+    "matches":  ["https://www.google.com/*", "https://fonts.googleapis.com/*", "https://netdna.bootstrapcdn.com/*", "https://citation.projecttopics.org/*"],
+    "js": ["jquery.min.js","content.js","bootstrap.min.js", "moment.js"]
+  }
+],
+  "browser_action": {
+  "default_icon": "icon.png"
+},
+"background": {
+  "scripts": ["background.js"]
+},
+ "chrome_url_overrides" : {
+    "newtab": "product/index.html"
+  }
+}
